@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <button onclick="alert('JS BERJALAN!')">Klik Saya</button>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="auth.js"></script>
+  <script>
+    document.write('<p>Script dimuat: ' + new Date() + '</p>');
+    if(typeof supabase !== 'undefined'){
+      document.write('<p style="color:green">✅ Supabase CDN OK</p>');
+    } else {
+      document.write('<p style="color:red">❌ Supabase CDN GAGAL</p>');
+    }
+    if(typeof supabaseClient !== 'undefined'){
+      document.write('<p style="color:green">✅ supabaseClient OK</p>');
+    } else {
+      document.write('<p style="color:red">❌ supabaseClient GAGAL dimuat</p>');
+    }
+  </script>
+</body>
+</html>
